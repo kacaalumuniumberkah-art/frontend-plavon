@@ -1,6 +1,5 @@
 'use client';
 
-import './page.css';
 import Navbar from './components/page/navbar/page';
 import HeroBanner from './components/banner/hero/page';
 import About from './components/page/about/page';
@@ -9,6 +8,7 @@ import Keuntungan from './components/page/keuntungan/page';
 import Address from './components/page/address/page';
 import BannerCTA from './components/banner/bannerCTA/page';
 import Footer from './components/footer/page';
+import './page.css';
 
 export default function Home() {
 
