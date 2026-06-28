@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import CardProduct from '../../card/page';
+import ProdukModal from '../../modal/produkModal/page';
 
 const PRODUCTS = [
     {
@@ -115,10 +116,16 @@ const FILTERS = [
 ];
 
 export default function Produk() {
+    const [showDetail, setShowDetail] = useState(false);
+    const [selectedProduk, setSelectedProduk] = useState(null);
+
     const [activeFilter, setActiveFilter] = useState('semua');
 
     const filteredProducts = activeFilter === 'semua' ? PRODUCTS : PRODUCTS.filter((p) => p.category === activeFilter);
-
+    const handleClick = (produk) => {
+        setSelectedProduk(produk);
+        setShowDetail(true);
+    };
     return (
         <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -160,9 +167,11 @@ export default function Produk() {
                             badge={p.badge}
                             badgeLabel={p.badgeLabel}
                             desc={p.desc}
+                            onViewDetail={() => handleClick(p)}
                         />
                     ))}
                 </div>
+                {showDetail && <ProdukModal product={selectedProduk} onClose={() => setShowDetail(false)} />}
             </div>
         </>
     );
