@@ -1,5 +1,9 @@
 import { Geist, Geist_Mono, Poppins } from 'next/font/google';
+import AuthProvider from './(auth)/authProvider';
+import { Provider } from 'react-redux';
 import './globals.css';
+import { store } from '@/store/store';
+import Providers from './providers';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -86,7 +90,9 @@ export default function RootLayout({ children }) {
                     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
                 />
             </head>
-            <body className="min-h-full flex flex-col">{children}</body>
+            <body className="min-h-full flex flex-col">
+                <Providers>{children}</Providers>
+            </body>
         </html>
     );
 }

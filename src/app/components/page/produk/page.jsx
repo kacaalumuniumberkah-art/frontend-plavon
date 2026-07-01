@@ -6,8 +6,7 @@ import CardProduct from '../../card/page';
 const PRODUCTS = [
     {
         category: 'gypsum',
-        icon: 'fa-layer-group',
-        iconColor: 'text-blue-400',
+        image: '/images/product/5006.jpg',
         bg: null,
         badge: 'bg-blue-50 text-blue-700',
         badgeLabel: 'Gypsum',
@@ -16,8 +15,7 @@ const PRODUCTS = [
     },
     {
         category: 'gypsum',
-        icon: 'fa-layer-group',
-        iconColor: 'text-blue-400',
+        image: '/images/product/5006.jpg',
         bg: null,
         badge: 'bg-blue-50 text-blue-700',
         badgeLabel: 'Gypsum',
@@ -26,8 +24,7 @@ const PRODUCTS = [
     },
     {
         category: 'gypsum',
-        icon: 'fa-layer-group',
-        iconColor: 'text-blue-400',
+        image: '/images/product/5006.jpg',
         bg: null,
         badge: 'bg-blue-50 text-blue-700',
         badgeLabel: 'Gypsum',
@@ -155,8 +152,7 @@ export default function Produk() {
                             name={p.name}
                             category={p.category}
                             bg={p.bg}
-                            icon={p.icon}
-                            iconColor={p.iconColor}
+                            image={p.image}
                             badge={p.badge}
                             badgeLabel={p.badgeLabel}
                             desc={p.desc}
