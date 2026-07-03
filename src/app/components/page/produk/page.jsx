@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import CardProduct from '../../card/page';
+import CardProduct from '../../card/cardProduct';
 
 const PRODUCTS = [
     {
